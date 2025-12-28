@@ -1,0 +1,55 @@
+//create a abstract class shape with an abstract method area().. then create classes circle,rectangle that extends
+//shape to implement area()
+
+
+
+
+package abstraction;
+
+import java.util.Scanner;
+
+abstract class shape{
+	abstract double area();
+}
+class Circle extends shape{
+	double radius;
+	Circle(double r ){
+		radius=r;
+	}
+	double area() {
+		return Math.PI*radius*radius;
+		}
+}
+class rectangle extends shape{
+	int l,b;
+	rectangle(int l,int b){
+		this.l=l;
+		this.b=b;
+	}
+	double area() {
+		return l*b;
+	}
+}
+
+public class P1_shape_area {
+
+	public static void main(String[] args) {
+		
+			Scanner sc=new Scanner(System.in);
+			System.out.println("enter radius of ur circle :");
+			int r=sc.nextInt();
+			shape s1=new Circle(r);
+			System.out.println("enter length of ur rectangle :");
+			int l=sc.nextInt();
+			System.out.println("enter breadth of ur rectangle :");
+			int b=sc.nextInt();
+			shape s2=new rectangle(l,b);
+		//	shape s1=new Circle(5);
+		//	shape s2=new rectangle(5,10);
+			
+			System.out.println("the area of Circle is :"+s1.area());
+			System.out.println("the area of rectangle is :"+s2.area());
+	}
+
+}
+
