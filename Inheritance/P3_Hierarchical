@@ -1,0 +1,27 @@
+package inheritance;
+class mobile{
+	mobile(){
+		System.out.println("this is a mobile");
+	}
+}
+class samsung extends mobile{
+	samsung(){
+		System.out.println("this mobile is made by samsung ");
+	}
+}
+
+class apple extends mobile{
+	apple(){
+		System.out.println(" this mobile made by apple");
+	}
+}
+public class P3_Hierarchical {
+
+	public static void main(String[] args) {
+		samsung obj1=new samsung();
+		apple obj2=new apple();
+		
+
+	}
+
+}
