@@ -1,0 +1,28 @@
+package inheritance;
+
+interface landvehicle{
+	default void landinfo() {
+		System.out.println("this is a land-vehicle");
+	}
+}
+interface watervehicle{
+	default void waterinfo() {
+		System.out.println("this is a water vehicle :");
+	}
+}
+class amphibiousvehicle implements landvehicle,watervehicle{
+	amphibiousvehicle(){
+		System.out.println("this is amphibious vehicle ");
+	}
+}
+
+public class P4_Multiple_inheritance {
+
+	public static void main(String[] args) {
+		
+		amphibiousvehicle obj=new amphibiousvehicle();
+		obj.waterinfo();
+		obj.landinfo();
+	}
+
+}
