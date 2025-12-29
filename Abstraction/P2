@@ -1,0 +1,85 @@
+/*Create an abstract class Food that has:
+An abstract method prepareFood() (to be implemented differently for each type of food).
+A concrete method deliverFood() that prints "Delivering Food to customer...".
+Then, create three subclasses:
+Pizza → prints "Preparing Pizza with cheese and toppings!" in prepareFood().
+Burger → prints "Preparing Burger with patty and lettuce!" in prepareFood().
+Sushi → prints "Preparing Sushi with rice and fish!" in prepareFood().
+In the main() method:
+Allow the user to choose which food to order (Pizza, Burger, or Sushi).
+Call both prepareFood() and deliverFood() for the chosen food.
+*/
+
+
+package abstraction;
+
+import java.util.Scanner;
+
+abstract class food{
+	abstract void preparefood();
+	
+	void  deliverfood() {
+		System.out.println("Delivering food to the customer ......");
+		
+	}
+}
+ class pizza extends food{
+
+	void preparefood() {
+		System.out.println("Preparing Pizza with cheese and toppings!");
+		
+		
+	}
+	
+}
+ class burger extends food{
+
+	
+	void preparefood() {
+		System.out.println("Preparing Burger with patty and lettuce!");
+		
+	}
+	 
+ }
+ class sushi extends food{
+	 void preparefood() {
+		 System.out.println("preparing sushi with rice and fish !");
+	 }
+ }
+
+public class P2 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("___________welcome___________");
+		System.out.println("what do u want to order ?");
+		System.out.println("1. Pizza");
+	    System.out.println("2. Burger");
+	    System.out.println("3. Sushi");
+	    
+	    int choice=sc.nextInt();
+	   food order=null;
+	    switch (choice) {
+        case 1:
+            order = new pizza();
+            break;
+        case 2:
+            order = new burger();
+            break;
+        case 3:
+            order = new sushi();
+            break;
+        default:
+            System.out.println("Invalid choice! Please try again.");
+    }
+	    
+	    if (order != null) {
+	        order.preparefood();
+	        order.deliverfood();
+	    }
+
+		
+
+	}
+
+}
