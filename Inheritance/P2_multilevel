@@ -1,0 +1,23 @@
+package inheritance;
+
+class AEC{
+	AEC(){
+		System.out.println("this is Asansol Engineering College ");
+	}
+}
+class CSE extends AEC{
+	CSE(){
+		System.out.println("this is Departmnet of Computer Science & Engineering of Asansol Engineering college ");
+	}
+}
+class Thirdyr extends CSE{
+	Thirdyr(){
+		System.out.println("this is 3rd year if computer science and engineering students of asansol engineering college");
+	}
+}
+public class P2_multilevel_inheritance {
+	public static void main(String [] args ) {
+		 Thirdyr obj=new Thirdyr();
+	}
+
+}
