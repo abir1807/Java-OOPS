@@ -1,0 +1,81 @@
+package encapslation;
+
+
+
+
+
+class Bank{
+	private int AccountNumber;
+	private String HolderName;
+	private double Balance;
+	
+	
+	public Bank(int accountNumber, String holderName) {
+	
+		this.AccountNumber = accountNumber;
+		this.HolderName = holderName;
+		this.Balance = 0.0;
+	}
+	
+	
+
+	public String getHolderName() {
+		return HolderName;
+	}
+	public void setHolderName(String holderName) {
+		this.HolderName = holderName;
+	}
+	public double getBalance() {
+		return Balance;
+	}
+	
+	public void withdrawn(double amount) {
+		if(amount >0 && amount <= Balance) {
+			Balance=Balance-amount;
+			 System.out.println("Withdrawn: " + amount);
+		}
+		else {
+			System.out.println(" insufficient balance !");
+		}
+	}
+	
+	public void deposit(double amount) {
+		if(amount >0) {
+			Balance=Balance+amount;
+			 System.out.println("Deposited: " + amount);
+		}
+		else {
+			System.out.println("Invalid deposit amount!");
+		}
+	}
+	
+	public void showdetails() {
+		System.out.println(" account details :");
+		System.out.println("customers account number is "+AccountNumber);
+		System.out.println("name "+HolderName);
+		System.out.println("balance"+ Balance);
+	
+	}
+	
+	
+	
+}
+public class P2_bankacc_management {
+
+	public static void main(String[] args) {
+		
+			Bank B1=new Bank(1080,"Abir");
+			
+			B1.showdetails();
+			B1.deposit(10000);
+			B1.withdrawn(3499);
+			
+			System.out.println("current balance ="+B1.getBalance());
+			
+			B1.setHolderName("Abir Ghosh ");
+			B1.showdetails();
+	}
+
+	
+
+}
