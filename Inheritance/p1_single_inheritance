@@ -1,0 +1,21 @@
+package inheritance;
+
+
+class vehicle{
+	vehicle(){
+		System.out.println("this is a vehicle ");
+	}
+}
+class car extends vehicle{
+	car(){
+		System.out.println("this vehicle is a car ");
+	}
+}
+public class P1_single_inh {
+
+	public static void main(String[] args) {
+		car obj=new car();
+
+	}
+
+}
