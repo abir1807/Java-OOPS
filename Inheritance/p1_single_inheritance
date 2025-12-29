@@ -1,12 +1,12 @@
 package inheritance;
 
 
-class vehicle{
+class vehicle{      //super class
 	vehicle(){
-		System.out.println("this is a vehicle ");
+		System.out.println("this is a vehicle ");     
 	}
 }
-class car extends vehicle{
+class car extends vehicle{    //sub class
 	car(){
 		System.out.println("this vehicle is a car ");
 	}
