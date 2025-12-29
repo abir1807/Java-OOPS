@@ -1,0 +1,40 @@
+package encapslation;
+
+
+class student{
+	private String name; //data hiding
+	private int age; //data hiding
+	
+	
+	public String getName() { //getter
+		return name;
+	}
+	public void setName(String name) { //setter
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		if(age>0) {
+		this.age = age;
+	}else {
+		System.out.println("age must be positive");
+	}
+	
+	}
+}
+public class P1 {
+
+	public static void main(String[] args) {
+			
+			student s=new student();
+			
+			s.setName("Abir Ghosh");
+			s.setAge(21);
+			
+			System.out.println("Name :"+s.getName());
+			System.out.println("Age :"+s.getAge());
+	}
+
+}
